@@ -26,6 +26,7 @@ export default function App() {
     const data = await response.json();
     let dataObject = data.response.data[0];
     setOneItem(dataObject);
+    console.log(dataObject);
   }
 
   function clear(params) {
