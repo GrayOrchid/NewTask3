@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+
+ body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    background: #eef3fb;
+  }
+
+  .App {
+    padding: 15px;
+  }
+
+  .block {
+    width: 35%;
+    margin-right: 15px;
+    padding: 15px;
+    border: 5px solid white;
+    border-radius: 3px;
+    background-color: white;
+    color: #5f5ea0;
+    height: initial;
+    line-height: initial;
+  }
+
+  .block__title {
+    font-size: 18px;
+  }
+
+  .block__subtitle {
+    margin-top: -10px;
+  }
+
+  .block__list-item:before {
+    content:' - ';
+    font-weight:bold
+  }
+
+  .block__list-items {
+    margin-top: -5px;
+    line-height: 0.5;
+  }
+
+  .card {
+    width: 35%;
+    margin-top: 15px;
+    padding: 15px;
+    border-left: 10px solid #7BCD86;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .notice {
+    width: calc(100% - 40%);
+    padding-right: 20px;
+    padding-left: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+  }
+
+  [data-color="light-purple"] p {
+    border-radius: 5px;
+    top: 0;
+    background: #e1d1f5;
+    color: #6e67d4;
+    font-size: inherit;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .text-bold {
+    font-weight: bold;
+  }
+
+  .notice-block {
+    width: calc(100% - 40%);
+    padding-right: 20px;
+    padding-left: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    padding:10px;
+    margin-top: -10px;
+  }
+
+  .notice-block__content {
+    width:100%
+  }
+
+  .notice-block__header {
+    display: flex;
+    background: #eef3fb;
+    margin-top: -10px;
+  }
+
+  .notice-block__header-text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0 10px;
+  }
+
+  .notice-block__header-id {
+    background: #5f5ea0;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .notice-block__header-event {
+    color:#DFE2E8;
+  }
+
+  .notice-block__header-text-clear {
+    background: #CD5C5C;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+    cursor:pointer;
+    transition:.2s
+  }
+
+  .notice-block__header-text-clear:hover {
+    background: #8a1c1c
+  }
+
+  .notice-block__hint {
+    padding:10px;
+  }
+
+  .notice-block__hint-text {
+    background: #eef3fb;
+    border-radius:5px;
+    padding:10px;
+    display:flex;
+    align-items:center;
+    gap:0 10px;
+  }
+
+  .notice-block__hint-icon {
+    color:#5f5ea0;
+    font-size:20px;
+  }
+
+  .notice-block__text-content {
+    margin-top:-25px;
+    background: white;
+    padding:10px;
+  }
+
+  .notice-block__text-description {
+    padding:10px;
+    margin-top:-20px
+  }
+
+  .notice-block__link {
+    display:flex;
+    gap:0 15px;
+    align-items:center;
+    padding:10px;
+    margin-top:-30px
+  }
+
+  .notice-block__link-copy {
+    border-bottom: 1px dotted #000;
+    cursor:pointer;
+  }
+
+  .__mobile-button {
+    display:none
+  }
+
+  @media (max-width: 768px) {
+    .block, .card, .notice {
+      width:80%;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    .notice__content {}
+
+    .block__list-items {
+      margin-top: 0;
+      line-height: 1.2;
+    }
+
+    .notice-block {
+      width:92%;
+      left: 0;
+      padding: 15px;
+      top: 0;
+      margin-top: 0px;
+      transition: 0.2s;
+      position:sticky;
+      padding-left:0px;
+      padding-right:0px;
+    }
+
+    .notice {
+      width:87%;
+      left: 0;
+      padding: 15px;
+      top: 0;
+      margin-top: 0px;
+      transition: 0.2s;
+      position:sticky;
+      padding-left:0px;
+      padding-right:0px;
+    }
+
+    [data-color="light-purple"] p {
+      margin-top: 0px;
+      width: 100%;
+      border-radius: 5px;
+      top: 0;
+      color: #6e67d4;
+      font-size: 20px;
+      padding: 5px;
+      text-align: start;
+      transition: 0.2s;
+      border-left: 5px solid #e1d1f5;
+    }
+
+    .notice-block__hint {
+      width:95%;
+      padding:0px
+    }
+
+    .notice-block__hint-text {
+      white-space: normal;
+      background: #eef3fb;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      text-align:center;
+      gap: 0 5px;
+      font-size:8px;
+      padding:5px;
+      height:25px;
+      width:100%;
+      margin-bottom:10px;
+    }
+
+    .notice-block__hint-icon {
+      color: #5f5ea0;
+      font-size: 25px;
+    }
+
+    .notice__text-description {
+      margin-top:1px;
+      font-size:12px;
+      padding:0px
+    }
+
+    .notice-block__link {
+      font-size:12px;
+      flex-flow:column;
+      align-items:start;
+      ;
+    }
+
+    .notice-block__link {
+      display:flex;
+      align-items:start;
+      padding:0px;
+      margin-top:10px;
+    }
+
+    .notice-block__link-copy {
+      border-bottom: 1px dotted #000;
+      cursor:pointer;
+      margin-top:2px;
+    }
+
+    .notice-block__header-text-clear {
+      display:none
+    }
+
+    .notice-block__header-text-event {
+      font-size:12px;
+    }
+
+    .notice-block__button-container {
+      text-align:end;
+    }
+
+    .__mobile-button {
+      display:initial;
+      text-align:end;
+      padding:5px;
+      font-size:16px;
+    }
+  }
